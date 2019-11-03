@@ -5,6 +5,12 @@
 - 封裝 logger
 - 封裝 router
 
+## Usage
+
+`cp .env.example .env`
+
+修改 MySQL 連線路徑
+
 ## Godotenv
 
 ```
