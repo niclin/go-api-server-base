@@ -1,16 +1,10 @@
 package server
 
 import (
-	"go101/serializer"
+	"go101/api"
+
 	"github.com/gin-gonic/gin"
 )
-
-func Ping(c *gin.Context) {
-	c.JSON(200, serializer.Response{
-		Code: 0,
-		Msg:  "Pong",
-	})
-}
 
 func NewRouter() *gin.Engine {
 	r := gin.Default()
@@ -18,7 +12,7 @@ func NewRouter() *gin.Engine {
 	// 路由
 	v1 := r.Group("/api/v1")
 	{
-		v1.GET("ping", Ping)
+		v1.GET("ping", api.Ping)
 	}
 	return r
 }
